@@ -1,0 +1,24 @@
+- Блок определения задачи
+BeginAddProblem <ProblemName> 
+- Добавление задачи с массивом параметров (TimeCost, DueTo, Reward, Penalty и тп.):
+AddTask <TaskNumber> [<Array: <{VarName, VarType, Value}>>] 
+- Добавление функции для задания ограничений или целевой функции на основе MATH функций или других функций:
+AddFunction <Name> <Description based on MATH functions and added variables>
+- Добавление ограничения:
+AddConstraint <FunctionName> <ConstraintValue>
+- Добавление ограничений на порядок задач:
+AddTaskOrderConstraint <TaskNumber1> <TaskNumber2>
+- Выбор солвера для задачи:
+SetSolver <SolverName>
+- Задание целевой функции:
+SetObjectiveFunction <FunctionName> <FunctionMode>
+- Конец блока определения задачи:
+EndAddProblem
+
+Математичкские операции для задания функции:
+MATH:SUM(VAR, I_START, I_END) - сумма по массиву
+MATH:LE(A, B) - меньше или равно
+MATH:L(A,B) - меньше
+MATH:GE(A,B) - больше или равно
+MATH:G(A,B) - больше
+MATH:DOT(A,B) - умножение
